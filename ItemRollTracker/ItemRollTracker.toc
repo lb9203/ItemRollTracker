@@ -1,0 +1,28 @@
+## Interface: 80300
+## Title: Item Roll Tracker
+## Author: Ernest Gu
+## Version: 2.3.1
+## Notes: A simple interface to list (and sort) gear rolls.
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: ItemRollTrackerDB
+
+# external libraries
+embeds.xml
+# locales.xml
+
+# lua libraries
+color.lua
+consts.lua
+
+# templates
+widgets.lua
+widgets.xml
+components.lua
+components.xml
+
+# core files
+ItemRollTracker.lua
+ItemRollTracker.xml
+Options.lua
+Options.xml

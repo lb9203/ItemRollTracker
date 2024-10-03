@@ -1,32 +1,27 @@
-# Easy Roll Tracker
+# Item Roll Tracker
+
+This addon is a fork of the no-longer-functional [EasyRollTracker](https://github.com/ErythroGuild/EasyRollTracker) addon by Ernest314. Some features I deemed unnecessary have been cut and some added.
 
 A lightweight addon to list `/roll` results in a raid,
 with many convenience features. Open the tracking window
 with `/rt` or `/rolltrack`.
 
-**Feedback, suggestions, and criticism are welcome!**
-Open a [new GitHub issue][6] for the fastest response,
-but comments in other places will get to me eventually.
-
 ### Limitations
 - Can only handle one roll at a time
-- Cannot show order of duplicate rolls; I recommend
-making a rule to only count lowest roll in this case
-(or go back to chat logs and check)
+- Doesn't show duplicate rolls. Players with multiple rolls for a single item have a blue-coloured roll.
 - Specs are fetched one-at-a-time, and subject to server
-limits (need to send inspect request and be in range)
+limits (need to send inspect request and be in range).
 
 ### Major features
 
 - Listing and sorting all `/roll` results in group
-- Tracking the number rolled out of
-- Announcing loot rolls to group as `/rw`
-- A variety of customizable options
+- Announcing rolled items to group as `/rw`
+- Directly trading with players by dragging items on their name.
 
 ### Commands
 
 *These can be opened with any of the addon aliases:*
-*`/rt`, `/rolltrack`, or `/erolltracker`.*
+*`/rt`, `/rolltrack`.*
 
 - `/rt`: toggles main window
 - `/rt help`, `h`, `?`: prints a list of available commands
@@ -55,18 +50,4 @@ limits (need to send inspect request and be in range)
 
 *The project can be found on CurseForge [here][1].*
 
-*Download the latest release from GitHub [here][2].*
-
-*A roadmap for future releases can be found [here][3].*
-
-*Screenshots (including historical versions) hosted*
-*on Imgur [here][4].*
-
-*Latest CurseForge screenshots are [here][5].*
-
-[1]: https://www.curseforge.com/wow/addons/easy-roll-tracker
-[2]: https://github.com/ErythroGuild/EasyRollTracker/releases/latest
-[3]: https://github.com/ErythroGuild/EasyRollTracker/milestones
-[4]: https://imgur.com/a/AZu9CpG
-[5]: https://www.curseforge.com/wow/addons/easy-roll-tracker/screenshots
-[6]: https://github.com/ErythroGuild/EasyRollTracker/issues/new
+[1]: https://legacy.curseforge.com/wow/addons/itemrolltracker

@@ -1,3 +1,8 @@
+
+Thank to Ernest314 for creating the EasyRollTracker addon.
+
+Original acknowledgements:
+
 **Thanks to:** (in no particular order)
 
 Meorawr, Arkoniel, and the rest of the WoW Addons; discord server for helping me with all of my questions.

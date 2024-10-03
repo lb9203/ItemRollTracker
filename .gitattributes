@@ -1,10 +1,10 @@
 ## Include overrides
 
 # WoW .toc
-EasyRollTracker/*.toc linguist-detectable
+ItemRollTracker/*.toc linguist-detectable
 
 # WoW UI XML
-EasyRollTracker/*.xml linguist-detectable
+ItemRollTracker/*.xml linguist-detectable
 
 ## Vendored code
 
@@ -12,4 +12,4 @@ EasyRollTracker/*.xml linguist-detectable
 FrameXML/* linguist-vendored
 
 # External addon libraries
-EasyRollTracker/Libs/* linguist-vendored
+ItemRollTracker/Libs/* linguist-vendored

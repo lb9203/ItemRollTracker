@@ -1,0 +1,113 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+
+	<Frame name="iRollTracker_Template_Heading" virtual="true">
+		<Size x="180" y="72"/>
+		<KeyValues><KeyValue key="entryType" value="HEADING"/></KeyValues>
+
+		<Scripts>
+			<OnEnter>
+				local _, itemLink = GetItemInfo(self.item);
+				if itemLink ~= nil then
+					GameTooltip:ClearLines();
+					GameTooltip:SetOwner(_G["iRollTrackerFrame_Scroll"], "ANCHOR_NONE");
+					GameTooltip:SetPoint("BOTTOMLEFT", self.border, "BOTTOMRIGHT", 4, 0)
+					GameTooltip:SetHyperlink(itemLink);
+					GameTooltip:Show();
+				end
+			</OnEnter>
+			<OnLeave function="iRollTracker_HideTooltip"/>
+			<OnMouseDown>
+				if self.item ~= "" then
+					PickupItem(self.item)
+				end
+			</OnMouseDown>
+		</Scripts>
+
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture parentKey="icon">
+					<Size x="33" y="33"/>
+					<Anchors><Anchor point="CENTER" y="8"/></Anchors>
+					<Color r="0.25" g="0.65" b="0.45" a="1.00"/>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<Texture parentKey="border"
+					file="Interface\AddOns\ItemRollTracker\rc\frame-item.tga">
+					<Size x="36" y="36"/>
+					<Anchors><Anchor point="CENTER" y="8"/></Anchors>
+					<Color r="0.85" g="0.85" b="0.85" a="1.00"/>
+				</Texture>
+				<FontString name="$parent_Label"
+					parentKey="label"
+					inherits="ChatFontNormal"
+					text="Thunderfury">
+					<Size x="180" y="20"/>
+					<Anchors><Anchor point="BOTTOM" y="2"/></Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Frame>
+
+	<Frame name="iRollTracker_Template_Entry" virtual="true" enableMouse="true">
+		<Size x="0" y="24"/>
+		<KeyValues><KeyValue key="entryType" value="ENTRY"/></KeyValues>
+		<Scripts>
+					<OnMouseDown function="iRollTracker_SendCursorPlayer"/>
+		</Scripts>
+		<Layers>
+			<Layer level="HIGHLIGHT">
+				<Texture setAllPoints="true">
+					<Color r="0.85" g="0.85" b="0.85" a="0.20"/>
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<Texture name="$parent_SpecBackground"
+					parentKey="specBackground">
+					<Size x="28" y="16"/>
+					<Anchors><Anchor point="CENTER"/></Anchors>
+					<Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<FontString name="$parent_Role"
+					parentKey="role"
+					inherits="ChatFontNormal"
+					text="#">
+					<Size x="20" y="24"/>
+				</FontString>
+				<FontString name="$parent_Spec"
+					parentKey="spec"
+					inherits="ChatFontSmall"
+					justifyH="CENTER"
+					text="RST">
+					<Size x="32" y="24"/>
+				</FontString>
+				<FontString name="$parent_Max"
+					parentKey="max"
+					inherits="ChatFontNormal"
+					justifyH="RIGHT"
+					text="100">
+					<Size x="50" y="24"/>
+					<Anchors><Anchor point="RIGHT" x="-14"/></Anchors>
+				</FontString>
+				<FontString name="$parent_Roll"
+					parentKey="roll"
+					inherits="ChatFontNormal"
+					justifyH="RIGHT"
+					text="42">
+					<Size x="40" y="24"/>
+				</FontString>
+				<FontString name="$parent_Name"
+					parentKey="name"
+					inherits="ChatFontNormal"
+					justifyH="LEFT"
+					text="Edeilinna">
+					<Size x="0" y="24"/>
+				</FontString>
+			</Layer>
+		</Layers>
+	</Frame>
+</Ui>
