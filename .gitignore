@@ -1,6 +1,7 @@
 # Packaged addon
-EasyRollTracker-v*.zip
-EasyRollTracker-v*.7z
+ItemRollTracker-v*.zip
+ItemRollTracker-v*.7z
+package
 
 # VS Code development
 FrameXML/UI.xsd
