@@ -1,10 +1,10 @@
 ## Include overrides
 
 # WoW .toc
-ItemRollTracker/*.toc linguist-detectable
+*.toc linguist-detectable
 
 # WoW UI XML
-ItemRollTracker/*.xml linguist-detectable
+*.xml linguist-detectable
 
 ## Vendored code
 
@@ -12,4 +12,4 @@ ItemRollTracker/*.xml linguist-detectable
 FrameXML/* linguist-vendored
 
 # External addon libraries
-ItemRollTracker/Libs/* linguist-vendored
+libs/* linguist-vendored
