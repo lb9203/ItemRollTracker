@@ -1,7 +1,7 @@
 ## Interface: 110002
 ## Title: Item Roll Tracker
 ## Author: Ernest Gu
-## Version: 3.0.3
+## Version: 3.0.4
 ## Notes: A simple interface to list (and sort) gear rolls.
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
