@@ -2,7 +2,8 @@
 ItemRollTracker-v*.zip
 ItemRollTracker-v*.7z
 package
-
+Zone.Identifier
+**/*Zone.Identifier
 # VS Code development
 FrameXML/UI.xsd
 
@@ -13,7 +14,7 @@ luac.out
 *.src.rock
 *.zip
 *.tar.gz
-
+    ¸¸
 # Object files
 *.o
 *.os
